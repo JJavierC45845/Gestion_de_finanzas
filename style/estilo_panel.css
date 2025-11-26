@@ -1,0 +1,62 @@
+ /* Tu paleta de colores integrada como variables CSS */
+        :root {
+            --color-fondo-sidebar: #D9EAFD;
+            --color-fondo-principal: #F8FAFC;
+            --color-texto-principal: #2c3e50;
+            --color-texto-secundario: #34495e;
+            --color-activo-hover: #BCCCDC;
+            --color-acento: #9AA6B2;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: var(--color-fondo-principal);
+            color: var(--color-texto-principal);
+        }
+        .wrapper {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 280px;
+            background-color: var(--color-fondo-sidebar);
+            transition: all 0.3s;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 2.5rem;
+        }
+
+        /* Estilos para los enlaces de la barra lateral */
+        .sidebar .nav-link {
+            color: var(--color-texto-secundario);
+            font-weight: 500;
+            border-radius: 0.5rem;
+        }
+        .sidebar .nav-link:hover {
+            background-color: var(--color-activo-hover);
+        }
+        .sidebar .nav-link.active {
+            background-color: var(--color-acento);
+            color: var(--color-fondo-principal);
+        }
+        .sidebar .nav-link .bi {
+            font-size: 1.2rem;
+        }
+
+        /* Estilos para las tarjetas de resumen */
+        .card-finance {
+            border: none;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .card-finance .card-title {
+            font-size: 1rem;
+            color: var(--color-texto-secundario);
+        }
+        .card-finance .card-text {
+            font-size: 2rem;
+            font-weight: bold;
+        }

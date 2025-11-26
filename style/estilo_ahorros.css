@@ -1,0 +1,116 @@
+:root {
+    --color-fondo-sidebar: #D9EAFD;
+    --color-fondo-principal: #F8FAFC;
+    --color-texto-principal: #2c3e50;
+    --color-texto-secundario: #34495e;
+    --color-activo-hover: #BCCCDC;
+    --color-acento: #9AA6B2;
+    --color-acento-oscuro: #838f9b;
+    --color-eliminar: #e74c3c;
+    --color-eliminar-hover: #c0392b;
+    --color-blanco: #ffffff;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+}
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+.sidebar {
+    width: 280px;
+    background-color: var(--color-fondo-sidebar);
+    transition: all 0.3s;
+}
+.main-content {
+    flex-grow: 1;
+    padding: 2.5rem;
+}
+
+.sidebar .nav-link {
+    color: var(--color-texto-secundario);
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+.sidebar .nav-link:hover {
+    background-color: var(--color-activo-hover);
+}
+.sidebar .nav-link.active {
+    background-color: var(--color-acento);
+    color: var(--color-fondo-principal);
+}
+.sidebar .nav-link .bi {
+    font-size: 1.2rem;
+}
+
+.card {
+    background-color: var(--color-blanco);
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    padding: 2rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 0.25rem rgba(154, 166, 178, 0.25);
+}
+
+.tabla-finanzas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+.tabla-finanzas th, .tabla-finanzas td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-fondo-sidebar);
+}
+.tabla-finanzas thead th {
+    background-color: var(--color-fondo-sidebar);
+    color: var(--color-texto-secundario);
+    font-weight: 600;
+}
+.tabla-finanzas tbody tr:hover {
+    background-color: var(--color-fondo-principal);
+}
+.tabla-finanzas td .btn {
+    margin-right: 0.5rem;
+}
+
+/* Estilos para los botones */
+.btn-principal {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    font-weight: 500;
+}
+.btn-principal:hover {
+    background-color: var(--color-acento-oscuro);
+    color: var(--color-blanco);
+}
+
+.btn-modificar {
+    background-color: var(--color-activo-hover);
+    color: var(--color-texto-secundario);
+    border: none;
+}
+.btn-modificar:hover {
+    filter: brightness(95%);
+}
+
+.btn-eliminar {
+    background-color: var(--color-eliminar);
+    color: var(--color-blanco);
+    border: none;
+}
+.btn-eliminar:hover {
+    background-color: var(--color-eliminar-hover);
+    color: var(--color-blanco);
+}
